@@ -38,7 +38,7 @@ function Home() {
 
     const deleteExpens = async (id) => {
         try {
-            const url = `https://mini-expense-tracker-backend.vercel.app/${id}`;
+            const url = `https://mini-expense-tracker-backend.vercel.app/expenses/${id}`;
             const headers = {
                 headers: {
                     'Authorization': localStorage.getItem('token')

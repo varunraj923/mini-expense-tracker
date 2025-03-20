@@ -11,7 +11,7 @@ This is the backend of the **Mini Expense Tracker** application, built using **N
   - Users can add, delete, and view expenses.
  
 - **Spending Insights**:
-  - Calculates total spending 
+  - Calculates total spending and expense
  
 
 ## Technologies Used

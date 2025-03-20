@@ -12,13 +12,11 @@ This is the frontend of the **Mini Expense Tracker** application, built using **
 - **Pages**:
   1. **Login/Registration**: Handles user authentication.
   2. **Dashboard**: Displays a list of expenses and spending insights.
-  3. **Add Expense**: A form for adding new expenses.
-  4. **Delete Expense**: Allows users to delete expenses.
+ 
 
 ## Technologies Used
 - **ReactJS**: Frontend framework.
 - **Create React App**: Used to bootstrap the project.
-- **Axios**: For making API requests to the backend.
 - **React Router**: For handling routing within the application.
 - **Vercel**: For deployment.
 

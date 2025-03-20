@@ -3,7 +3,7 @@ import React from 'react'
 function ExpenseDetails({ incomeAmt, expenseAmt }) {
     return (
         <div>
-            <div>
+            <div className='balance'>
                 Your Balance is ₹ {incomeAmt - expenseAmt}
             </div>
             {/* Show Income & Expense amount */}

@@ -1,85 +1,239 @@
 
 *,
 ::before,
-::after{
+::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-label{
-  font-size: 20px;
-}
-
 html,
-body{
+body {
   height: 100vh;
   width: 100vw;
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  background: #e4f3ff; /* Gradient background */
+  color: #333;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
 }
 
-.container{
-  background-color: #FFF;
+.container {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
   padding: 32px 48px;
-  border-radius: 10px;
+  border-radius: 15px;
   width: 100%;
   max-width: 400px;
-  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
 }
 
-.container > h1{
+.container > h1 {
   margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  font-weight: 600;
 }
 
-.container > form{
+.container > form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
-.container div{
+.container div {
   display: flex;
   flex-direction: column;
 }
 
-.container input{
+.container label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.container input {
   width: 100%;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 16px;
+  padding: 12px;
   border: none;
   outline: none;
-  border-bottom: 1px solid black;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent input background */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+  transition: all 0.3s ease;
 }
 
-.container input::placeholder{
-  font-size: 12px;
+.container input:focus {
+  border-color: #6a11cb; /* Highlight border on focus */
+  background-color: rgba(255, 255, 255, 1); /* Solid background on focus */
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.3); /* Soft glow effect */
+}
+
+.container input::placeholder {
+  font-size: 14px;
+  color: #999;
   font-style: italic;
 }
 
-button{
-  background-color: purple;
+button {
+  background-color: #6a11cb; /* Purple gradient */
   border: none;
-  font-size: 15px;
+  font-size: 16px;
   color: white;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 8px;
+  padding: 12px;
   cursor: pointer;
   margin: 10px 0;
+  transition: all 0.3s ease;
 }
 
-.user-section{
+button:hover {
+  background-color: #2575fc; /* Change color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3); /* Shadow on hover */
+}
+
+button:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+span {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+span a {
+  color: #6a11cb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+span a:hover {
+  color: #2575fc; /* Change link color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .container {
+    padding: 24px;
+    margin: 20px;
+  }
+
+  .container > h1 {
+    font-size: 24px;
+  }
+
+  .container input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  span {
+    font-size: 12px;
+  }
+}
+
+/* Navbar Container */
+.navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px; /* Reduced padding for compact height */
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: sticky; /* Make navbar sticky */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  height: 50px; /* Reduced height */
+  margin-top: 55px;
+  border-radius: 8px;
+  
+}
+
+/* Welcome Message */
+.navbar-welcome {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff; /* White text */
+  letter-spacing: 0.5px; /* Slight letter spacing for elegance */
+}
+
+/* Logout Button */
+.navbar-logout {
+  padding: 6px 15px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar-logout:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
+  border-color: rgba(255, 255, 255, 0.5); /* Brighter border on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 15px; /* Slightly reduced padding */
+  }
+
+  .navbar-welcome {
+    font-size: 1rem; /* Smaller font size */
+  }
+
+  .navbar-logout {
+    padding: 5px 12px; /* Smaller button */
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto; /* Auto height for mobile */
+    padding: 10px;
+  }
+
+  .navbar-welcome {
+    margin-bottom: 8px; /* Space between welcome message and button */
+  }
+
+  .navbar-logout {
+    width: 100%; /* Full-width button on mobile */
+    text-align: center;
+  }
 }
 
 /* Minimal styling for the expense list */
 .expense-list {
   font-family: Arial, sans-serif;
+ background-color:  rgba(255, 255, 255, 1);
+padding: 5px;
 }
 
 .expense-item {
@@ -148,4 +302,10 @@ button{
   background-color: #4CAF50;
   color: #fff;
   border-radius: 8px;
+}
+
+.balance{
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

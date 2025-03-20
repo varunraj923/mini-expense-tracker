@@ -116,10 +116,12 @@ function Home() {
 
     return (
         <div>
-            <div className='user-section'>
-                <h1>Welcome {loggedInUser}</h1>
-                <button onClick={handleLogout}>Logout</button>
-            </div>
+            <div className="navbar">
+      <h1 className="navbar-welcome">Welcome, {loggedInUser}</h1>
+      <button className="navbar-logout" onClick={handleLogout}>
+        Logout
+      </button>
+    </div>
             <ExpenseDetails
                 incomeAmt={incomeAmt}
                 expenseAmt={expenseAmt}

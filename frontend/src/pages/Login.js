@@ -27,7 +27,7 @@ function Login() {
             return handleError('email and password are required')
         }
         try {
-            const url = `${APIUrl}/auth/login`;
+            const url = `https://mini-expense-tracker-7ryd.vercel.app/auth/login`;
             const response = await fetch(url, {
                 method: "POST",
                 headers: {

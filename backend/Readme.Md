@@ -9,10 +9,10 @@ This is the backend of the **Mini Expense Tracker** application, built using **N
   - Handles token expiry and refresh tokens.
 - **Expense Management**:
   - Users can add, delete, and view expenses.
- 
+
 - **Spending Insights**:
-  - Calculates total spending 
- 
+  - Calculates total spending and total expense.
+
 
 ## Technologies Used
 - **Node.js**: Runtime environment.

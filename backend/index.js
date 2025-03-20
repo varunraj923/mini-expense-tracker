@@ -17,10 +17,26 @@ app.get('/ping', (req, res) => {
 });
 
 app.use(bodyParser.json());
-app.use(cors());
+
 app.use('/auth', AuthRouter);
 app.use('/products', ProductRouter);
 app.use('/expenses', ensureAuthenticated, ExpenseRouter)
+
+app.use(cors({
+    origin: (origin, callback) => {
+        const allowedOrigins = [
+            'https://mini-expense-tracker-ayii.vercel.app',
+            'http://localhost:3000'
+        ];
+        if (allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true
+}));
+
 
 
 
